@@ -1,0 +1,78 @@
+@import '~styles/_import'
+
+.row
+	display flex
+	flex-flow row wrap
+	margin-right auto
+	margin-left auto
+	max-width ($pageWidth + $colGap)
+	width 100%
+	.row
+		width auto
+		margin-right (-1 * $colGap / 2)
+		margin-left (-1 * $colGap / 2)
+		// @media md
+		@media (max-width: 1440px)
+			margin-right (-1 * $colGapLaptop / 2)
+			margin-left (-1 * $colGapLaptop / 2)
+		@media tablet
+			margin-right (-1 * $colGapTablet / 2)
+			margin-left (-1 * $colGapTablet / 2)
+		@media mobile
+			margin-right (-1 * $colGapMobile / 2)
+			margin-left (-1 * $colGapMobile / 2)
+	&.nowrap
+		flex-wrap: nowrap
+
+
+.wrapper
+	& + &
+		margin-top 110px
+		@media tablet
+			margin-top 60px
+
+.wrapperHalf
+	padding 20px 0
+	& + &
+		padding-top 0
+
+
+
+.col
+	padding-right ($colGap / 2)
+	padding-left ($colGap / 2)
+	flex 0 1 auto
+	box-sizing border-box
+	// @media md
+	@media (max-width: 1440px)
+		padding-right ($colGapLaptop / 2)
+		padding-left ($colGapLaptop / 2)
+	@media tablet
+		padding-right ($colGapTablet / 2)
+		padding-left ($colGapTablet / 2)
+	@media mobile
+		padding-right ($colGapMobile / 2)
+		padding-left ($colGapMobile / 2)
+
+
+for num in (1 .. 12)
+	.col-{num}
+		width (100% * num / 12)
+		@media mobile
+			width 100%
+
+for colCount in 8 10 12
+	for num in (1..colCount)
+		// @media md
+		@media (max-width: 1440px)
+			.col-laptop-{num}-{colCount}
+				width (100% * num / colCount)
+		@media tablet
+			.col-tablet-{num}-{colCount}
+				width (100% * num / colCount)
+		@media mobile
+			.col-mobile-{num}-{colCount}
+				width (100% * num / colCount)
+		@media small
+			.col-xs-{num}-{colCount}
+				width (100% * num / colCount)

@@ -1,0 +1,181 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+main,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video,
+input,
+textarea,
+button,
+select,
+option,
+:before,
+:after
+	margin 0
+	padding 0
+	border 0
+	color inherit
+	font-size 100%
+	font-weight inherit
+	font-style inherit
+	line-height inherit
+	vertical-align baseline
+	box-sizing border-box
+	outline none
+
+// stop layout from moving when the scrollbar appears
+// html
+// 	overflow-y overlay
+
+body
+	max-width 100vw
+	overflow-x hidden
+	background-color #fff
+	@media mobile
+		-webkit-text-size-adjust none // iphone fix
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+hgroup,
+menu,
+nav,
+section,
+summary
+	display block
+
+table
+	border-collapse collapse
+	border-spacing 0
+
+a[x-apple-data-detectors]
+	color inherit
+	text-decoration none
+	font-size inherit
+	font-weight inherit
+	line-height inherit
+
+input,
+textarea,
+button,
+select,
+option
+	box-shadow none
+	border-radius 0
+	-webkit-tap-highlight-color transparent
+
+input
+	-webkit-appearance none
+
+select::-ms-expand
+	display none // ie select appearance
+
+img
+	max-width 100%
+	vertical-align middle
+
+input[type=search]::-ms-clear,
+input[type=search]::-ms-reveal
+	display none
+	width 0
+	height 0
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration
+	display none
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance none
+	margin 0
+
+input[type=number]
+	-moz-appearance: textfield
+
+mark
+	background-color transparent !important

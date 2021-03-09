@@ -1,0 +1,220 @@
+@import './_vars.styl'
+@import './_media.styl'
+
+.regard-container
+	min-height 100vh
+	display flex
+	flex-direction column
+	@media tablet
+		padding-bottom (68 + 8)px
+
+body
+	color $fontColor
+	font-family $fontFamily, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, $fontFamilyLemon, Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif // fallback system fonts
+	font-size 16px
+	font-weight 400
+	line-height 24px
+	-webkit-font-smoothing antialiased // mac fix
+	-webkit-text-stroke 1px transparent // mac fix
+	-webkit-text-size-adjust 100% // stop iphone resize when orientation landscape
+	width 100vw
+	overflow-x hidden
+	letter-spacing 0
+	@media md
+		font-size round(16px * $smCoef)
+		line-height round(24px * $smCoef)
+
+input[type='checkbox']
+	appearance checkbox
+
+h1,
+.h1
+	font-size 26px
+	line-height 40px
+	font-weight 500
+	@media tablet
+		font-size 24px
+		line-height 28px
+
+h2,
+.h2
+	font-weight 500
+	font-size 24px
+	line-height 34px
+	@media tablet
+		font-size 20px
+		line-height 28px
+
+h3,
+.h3
+	font-weight 500
+	font-size 24px
+	line-height 32px
+	@media md
+		font-size round(24px * $smCoef)
+		line-height round(32px * $smCoef)
+	@media tablet
+		font-size 16px
+		line-height 24px
+
+h4,
+.h4
+	font-weight 700
+	font-size 16px
+	line-height 24px
+	@media md
+		font-size round(16px * $smCoef)
+		line-height round(24px * $smCoef)
+	@media tablet
+		font-size 14px
+
+h5,
+.h5
+	font-size 22px
+	line-height 30px
+	@media md
+		font-size round(22px * $smCoef)
+		line-height round(30px * $smCoef)
+
+h6,
+.h6
+	margin-top 20px
+	margin-bottom 20px
+
+ul
+	list-style none
+
+ol
+	padding-left 30px
+	li
+		padding-left 10px
+
+b,
+strong
+	font-weight 700
+
+i,
+em
+	font-style italic
+
+sup
+	position relative
+	top -0.25em
+	vertical-align baseline
+	font-size 85%
+	line-height 0
+
+sub
+	position relative
+	top 0.2em
+	vertical-align baseline
+	font-size 85%
+	line-height 0
+
+u
+	text-decoration underline
+
+blockquote
+	position relative
+	&:before,
+	&:after
+		display inline-block
+		color #bdbdbd
+		vertical-align -0.45em
+		font-size 3em
+		font-family 'Times New Roman'
+		line-height 0.1em
+	&:before
+		margin-right 5px
+		content '\201C'
+	&:after
+		margin-left 5px
+		content '\201D'
+
+code
+	font-family monospace
+
+a
+	cursor pointer
+	outline none
+	text-decoration none
+	&:focus,
+	&:active
+		outline none
+
+mark
+	background-color #ff0
+
+.textBody
+	font-size 16px
+	font-weight 400
+	line-height 24px
+	@media md
+		font-size round(16px * $smCoef)
+		line-height round(24px * $smCoef)
+	@media tablet
+		font-size 14px
+		line-height 20px
+
+.textDesc
+	font-size 14px
+	font-weight 400
+	line-height 24px
+	@media md
+		font-size round(14px * $smCoef)
+		line-height round(24px * $smCoef)
+	@media tablet
+		font-size 12px
+		line-height 16px
+
+.textSmall
+	font-size 14px
+	font-weight 400
+	line-height 24px
+	@media tablet
+		font-size 12px
+
+.textTiny
+	font-size 12px
+	font-weight 400
+	line-height 16px
+
+.textBtn
+	font-size 16px
+	font-weight 400
+	line-height 24px
+	@media tablet
+		font-size 14px
+		line-height 20px
+
+.priceTitle
+	font-size 20px
+	font-weight 700
+	line-height 32px
+	@media tablet
+		font-size 16px
+		line-height 24px
+
+.textUpper
+	text-transform uppercase
+
+.textItalic
+	font-style italic
+
+.textBold
+	font-size 700
+
+.label
+	display inline-block
+	color $gray500
+	margin-right 16px
+
+.link-blue
+	color $blue500
+
+.link-gray
+	color $gray500
+
+@media print
+	header, footer
+		display none

@@ -1,0 +1,129 @@
+@import "~styles/_import";
+
+.landingName
+  height: 320px;
+  background: #f09433;
+  background: -moz-linear-gradient($landingGradient);
+  background: -webkit-linear-gradient($landingGradient);
+  background: linear-gradient($landingGradient);
+  background-size: 300% 300%;
+  -webkit-animation: Background 25s ease infinite;
+  -moz-animation: Background 25s ease infinite;
+  animation: Background 25s ease infinite;
+
+.topRow
+  height 100%
+
+.topContainer
+  display flex
+  flex-direction column
+  align-items center
+  justify-content center
+  font-family $fontFamilyLemon
+  font-weight normal
+  font-style normal
+  font-display swap
+
+
+.projectName
+  font-size 64px
+  line-height 80px
+  font-style $fontFamily
+  font-weight bold
+  color #ffffff
+
+.projectDescription
+  font-size 32px
+  line-height 40px
+  color #ffffff
+
+.infoList
+  margin-top 24px
+
+.infoTitle
+  font-size 32px
+  line-height 36px
+  font-weight bold
+
+.infoSubtitle
+  margin-top 16px
+  font-size 24px
+  line-height 28px
+  font-weight bold
+
+.listWrapper
+  margin-left 4px
+  li
+    margin-top 12px
+    font-size 16px
+    line-height 18px
+    font-weight normal
+
+.middleSetter
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+
+.formTitle
+  margin-top 24px
+  font-size 24px
+  line-height 28px
+  font-weight bold
+
+.formSubtitle
+  font-size 16px
+  line-height 22px
+  font-weight bold
+  margin-top 16px
+
+.input
+  width 50%
+
+.inputWrap
+  margin-top 8px
+
+.authButton
+  margin-top 24px
+
+.hintText
+  margin-top 8px
+  font-size 11px
+  line-height 13px
+
+.switchButton
+  font-size 11px !important
+  line-height 13px !important
+
+@-webkit-keyframes Background
+  0%
+    background-position: 0% 50%;
+
+  50%
+    background-position: 100% 50%;
+
+  100%
+    background-position: 0% 50%;
+
+
+
+@-moz-keyframes Background
+  0%
+    background-position: 0% 50%;
+
+  50%
+    background-position: 100% 50%;
+
+  100%
+    background-position: 0% 50%;
+
+
+@keyframes Background
+  0%
+    background-position: 0% 50%;
+
+  50%
+    background-position: 100% 50%;
+
+  100%
+    background-position: 0% 50%;

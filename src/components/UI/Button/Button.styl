@@ -1,0 +1,186 @@
+@import '~styles/_import'
+
+button,
+.button
+	display inline-flex
+	justify-content center
+	align-items center
+	font-family inherit
+	text-align center
+	border-radius 4px
+	font-weight 400
+	position relative
+	user-select none
+	transition background-color 0.3s, color 0.3s, border-color 0.3s
+	&::-moz-focus-inner
+		border 0
+	&:focus
+		outline none
+	&:hover
+		cursor pointer
+
+button[disabled]
+	background-color $gray300
+	border-color $gray300
+	color #ffffff
+	pointer-events none
+	&:hover
+		@media more-tablet
+			background-color $gray300
+			border-color $gray300
+			color #ffffff
+	&.textLike
+		background-color transparent
+		opacity .3
+
+.large
+	height 56px
+	padding 16px 40px
+	font-size 16px
+	line-height 24px
+	@media md
+		height round(56px * $smCoef)
+		padding round(16px * $smCoef) round(40px * $smCoef)
+		font-size round(16px * $smCoef)
+		line-height round(24px * $smCoef)
+	@media tablet
+		height 40px
+		padding 10px 24px
+		font-size 14px
+		line-height 20px
+
+.medium
+	height 40px
+	padding 8px 24px
+	font-size 16px
+	line-height 24px
+	@media md
+		height round(40px * $smCoef)
+		padding round(8px * $smCoef) round(24px * $smCoef)
+		font-size round(16px * $smCoef)
+		line-height round(24px * $smCoef)
+	@media tablet
+		padding 10px 24px
+		font-size 14px
+		line-height 20px
+
+.small
+	height 40px
+	padding 8px 24px
+	font-size 16px
+	line-height 24px
+	@media md
+		height round(40px * $smCoef)
+		padding round(8px * $smCoef) round(24px * $smCoef)
+		font-size round(16px * $smCoef)
+		line-height round(24px * $smCoef)
+	@media tablet
+		height 32px
+		padding 6px 8px
+		font-size 14px
+		line-height 20px
+
+.textLike
+	padding 0
+	background-color transparent
+	color $blue500
+	height auto
+	font-size 16px
+	line-height 24px
+	font-weight 400
+	&:hover
+		color #000
+	@media tablet
+		font-size 14px
+		line-height 20px
+	&.red
+		color $red500
+	&.black
+		color #000
+		&:hover
+			color $blue500
+
+.textLikeInverted
+	@extend .textLike
+	color #000
+	&:hover
+		color $blue500
+
+.primaryVelvet
+	background-color $velvet500
+	color #ffffff
+	&:hover
+		@media more-tablet
+			background-color alpha($velvet500, 0.9)
+	&:active
+		background-color alpha($velvet500, 0.8)
+
+.primaryWhite
+	background-color $bg
+	color $fontColor
+	border: 1px solid $gray300;
+	&:hover
+		@media more-tablet
+			background-color alpha($bg, 0.6)
+	&:active
+		background-color alpha($bg, 0.7)
+	.spinner
+		color: $fontColor !important
+
+.secondary
+	background-color $blue200
+	color #000000
+	&:hover
+		@media more-tablet
+			background-color alpha($red500, 0.9)
+			color #ffffff
+	&:active
+		background-color alpha($red500, 0.8)
+
+.tertiary
+	background-color transparent
+	height 38px
+	color #000000
+	padding 6px 24px
+	border 1px solid $gray400
+	&:hover
+		@media more-tablet
+			color $blue500
+			border-color $blue500
+	&:active
+		color $blue500
+		border-color alpha($blue500, 0.8)
+
+.withIcon
+	height 40px
+	display inline-flex
+	justify-content center
+	align-items center
+	padding 8px 12px
+	font-size 16px
+	line-height 24px
+	svg
+		size 16px
+		margin-right 8px
+	@media tablet
+		height 32px
+		padding 8px 14px
+		font-size 12px
+		line-height 16px
+		svg
+			size 10px
+
+.fullWidth
+	width 100%
+
+.inGridCard
+	@extend .secondary
+
+.loading
+	pointer-events none
+
+.spinner
+	display block
+	margin-left auto
+	margin-right auto
+	position absolute
