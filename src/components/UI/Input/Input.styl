@@ -5,6 +5,25 @@
   font-size 14px
   line-height 18px
 
+.copyInput
+  position relative
+  font-weight bold
+
+.copy
+  cursor pointer
+  position absolute
+  top 0
+  right 0
+  border-radius 0 4px 4px 0
+  padding 12px 16px 12px 16px
+  background-color $orange400
+  &:hover
+    background-color alpha($orange400, 0.7)
+  svg
+    size 16px
+    path
+      fill #ffffff
+
 .input
   width 100%
   border-radius 4px

@@ -18,7 +18,18 @@ module.exports = {
         },
       },
       {
-        test: /.(jpg|jpeg|png|gif|mp3|svg)$/,
+        test: /\.(jpe?g|png|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '/public/static/img/[name].[ext]',
+        },
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
+        test: /.(jpg|jpeg|png|gif|mp3)$/,
         use: [
           {
             loader: 'file-loader',
@@ -50,12 +61,8 @@ module.exports = {
           'css-loader',
         ],
       },
-      {
-        test: /\.svg$/,
-        use: ['svg-loader'],
-      },
       { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: ['url-loader?limit=10000&minetype=application/font-woff'] },
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: ['file-loader'] },
+      { test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/, use: ['file-loader'] },
     ],
   },
   devServer: {

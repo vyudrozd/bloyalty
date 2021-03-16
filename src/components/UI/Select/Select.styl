@@ -1,0 +1,29 @@
+@import "~styles/_import";
+
+.wrap
+  position relative
+  width 100%
+  padding 12px 16px 12px 16px
+  border 1px solid $gray400
+  border-radius 4px
+  &:hover
+    border 1px solid $orange400
+
+
+.list
+  position absolute
+  top calc(100% + 4px)
+  border-radius 4px
+  width 100%
+  background-color $gray200
+  left 0
+
+.item
+  width 100%
+  padding 12px 16px 12px 16px
+  &:hover
+    background-color alpha($orange400, 0.7)
+
+
+.hide
+  display none
