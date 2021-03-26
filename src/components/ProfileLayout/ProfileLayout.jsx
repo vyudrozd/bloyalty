@@ -27,7 +27,7 @@ const ProfileLayout = ({ children, disableWhiteBox }) => (
       <Col size={3}>
         <div className={cx(s.leftPart, s.whiteBox)}>
           <div className={s.imgContainer}>
-            <img alt="John Doe" src={imageUrl} />
+            <img alt="John Doe" src="https://instagram.frix2-1.fna.fbcdn.net/v/t51.2885-19/s320x320/13402406_532985290225422_964375496_a.jpg?tp=1&_nc_ht=instagram.frix2-1.fna.fbcdn.net&_nc_ohc=ouaYcxbwU4AAX9tH_4D&edm=ABfd0MgAAAAA&ccb=7-4&oh=04f504a57fdf3fa3bde8ebaab8e4b6dc&oe=6086FB89&_nc_sid=7bff83" />
           </div>
           <div className={s.tabsTitle}>Профиль</div>
           <ul className={s.linkTabs}>
@@ -43,12 +43,12 @@ const ProfileLayout = ({ children, disableWhiteBox }) => (
           <div className={s.smallInfo}>
             <div className={s.smallInfoContainer}>
               <div className={s.votesToday}>
-                <div className={s.votesTodayCount}>28</div>
-                <div>Сегодня голосов</div>
+                <div className={s.votesTodayCount}>0.85%</div>
+                <div>ER</div>
               </div>
               <div className={s.votesTotal}>
-                <div className={s.votesTotalCount}>320</div>
-                <div>Всего голосов</div>
+                <div className={s.votesTotalCount}>4527</div>
+                <div>Всего подписчиков</div>
               </div>
             </div>
             <div className={cx(s.profileHint, s.hintText)}>

@@ -5,32 +5,32 @@ import Material from '../../components/Material';
 
 const data = [
   {
-    name: '14.03.2021',
-    uv: 7,
-  },
-  {
-    name: '15.03.2021',
-    uv: 5,
-  },
-  {
-    name: '16.03.2021',
-    uv: 4,
-  },
-  {
-    name: '17.03.2021',
-    uv: 12,
-  },
-  {
-    name: '18.03.2021',
-    uv: 8,
-  },
-  {
-    name: '19.03.2021',
-    uv: 20,
-  },
-  {
     name: '20.03.2021',
-    uv: 7,
+    votes: 7,
+  },
+  {
+    name: '21.03.2021',
+    votes: 5,
+  },
+  {
+    name: '22.03.2021',
+    votes: 4,
+  },
+  {
+    name: '23.03.2021',
+    votes: 12,
+  },
+  {
+    name: '24.03.2021',
+    votes: 8,
+  },
+  {
+    name: '25.03.2021',
+    votes: 20,
+  },
+  {
+    name: '26.03.2021',
+    votes: 7,
   },
 ];
 
@@ -38,10 +38,11 @@ const Profile = () => (
   <>
     <div className={s.whiteBox}>
       <div className={s.profileName}>
-        John Doe
+        Deloitte CIS
       </div>
       <div className={s.profileDescription}>
-        Веду курсы по английскому языку на протяжении 8 лет
+        Рейтинг самых богатых футбольных клубов — 2021⚽💰
+        deloi.tt/3shATe8
       </div>
     </div>
     <div className={s.whiteBox}>

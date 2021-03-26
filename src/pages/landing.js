@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { reduxForm, Field } from 'redux-form';
+import { reduxForm, Field, SubmissionError } from 'redux-form';
 import { useState } from 'react/cjs/react.production.min';
+import { useHistory } from 'react-router';
 import { Col, Row } from '../components/UI/Grid';
 import s from '../../styles/pages/landing.styl';
 import Page from '../components/Page';
@@ -12,6 +13,10 @@ import Button from '../components/UI/Button';
 const Landing = ({ handleSubmit }) => {
   const userData = useSelector(getUserData);
 
+  const [loading, setLoading] = useState(false);
+
+  const history = useHistory();
+
   console.log(userData);
 
   const [isRegistration, setIsReg] = useState(false);
@@ -20,19 +25,34 @@ const Landing = ({ handleSubmit }) => {
     setIsReg(!isRegistration);
   };
 
+  const onSubmit = values => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+      if (values.authLogin === 'demo_deloitte' && values.authPassword === '12345') {
+        history.push('/profile');
+      } else {
+        throw SubmissionError({
+          authLogin: 'Ошибка авторизации',
+        });
+      }
+    }, 1000);
+  };
+
   return (
     <Page>
       <div className={s.landingName}>
         <Row className={s.topRow}>
           <Col size={12} className={s.topContainer}>
-            <h1 className={s.projectName}>TopBlog</h1>
+            <h1 className={s.projectName}>Bloyalty</h1>
             <div className={s.projectDescription}>Сервис для анализа вашей аудитории</div>
           </Col>
         </Row>
         <Row className={s.mainContent}>
           <Col size={6}>
             <div className={s.infoList}>
-              <div className={s.infoTitle}>Зачем использовать TopBlog?</div>
+              <div className={s.infoTitle}>Зачем использовать Bloyalty?</div>
               <div className={s.infoSubtitle}>Для брендов: </div>
               <ul className={s.listWrapper}>
                 <li className={s.listItem}>- учитесь продвигать ваши товары</li>
@@ -47,7 +67,7 @@ const Landing = ({ handleSubmit }) => {
             </ul>
           </Col>
           <Col size={6}>
-            <form onSubmit={handleSubmit} className={s.middleSetter}>
+            <form onSubmit={handleSubmit(onSubmit)} className={s.middleSetter}>
               <div className={s.formTitle}>{!isRegistration ? 'Авторизация в сервисе' : 'Регистрация'}</div>
               <div className={s.formSubtitle}>Логин</div>
               <Field
@@ -79,7 +99,7 @@ const Landing = ({ handleSubmit }) => {
                   />
                 </>
               )}
-              <Button className={s.authButton} variant="primaryVelvet">{!isRegistration ? 'Авторизоваться' : 'Зарегистрироваться'}</Button>
+              <Button innerLoading={loading} className={s.authButton} variant="primaryVelvet" type="submit">{!isRegistration ? 'Авторизоваться' : 'Зарегистрироваться'}</Button>
               <div className={s.hintText}>
                 {!isRegistration ? (
                   <>

@@ -6,7 +6,7 @@ import Input from '../../components/UI/Input';
 import Select from '../../components/UI/Select';
 import Material from '../../components/Material';
 
-const link = 'topblog.com/Idv7gEV4gS145';
+const link = 'localhost:8080/vote?id=1&link_id=7';
 
 const Brand = () => {
   const [selectText, setSelect] = useState('Выбрать...');

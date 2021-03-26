@@ -13,11 +13,11 @@ const map = {
 };
 
 const Material = ({
-  className, variant, materialName, authorName,
+  className, variant, materialName, authorName, href,
 }) => {
   const currentVariant = map[variant];
   return (
-    <div className={cx(s.wrap, s[variant], className)}>
+    <a href={href} target="_blank" rel="noreferrer noopener" className={cx(s.wrap, s[variant], className)}>
       <div className={s.icon}>
         <currentVariant.Component />
       </div>
@@ -25,7 +25,7 @@ const Material = ({
         <div className={s.materialName}>{materialName}</div>
         <div className={s.authorName}>{`Автор: ${authorName}`}</div>
       </div>
-    </div>
+    </a>
   );
 };
 

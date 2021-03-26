@@ -39,7 +39,10 @@ const Button = ({
   return (
     <button className={classes} onClick={onClick} tabIndex={!disabled ? tabIndex : -1} disabled={disabled} type={type}>
       {innerLoading ? (
-        <Spinner className={s.spinner} color={spinnerColor} />
+        <>
+          <Spinner className={s.spinner} />
+          {children}
+        </>
       ) : (
         <>
           {Icon && <Icon className={iconClass && iconClass} />}
