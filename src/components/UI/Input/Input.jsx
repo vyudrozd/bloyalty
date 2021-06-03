@@ -42,6 +42,8 @@ const Input = ({
       });
   };
 
+  console.log(error);
+
   const classes = cx(s.input, disabled && s.disabled, className);
 
   const inputProps = {

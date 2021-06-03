@@ -17,7 +17,7 @@ const links = [
   {
     url: '/profile/brand',
     text: 'Бренд',
-  },
+  }
 ];
 
 const ProfileLayout = ({ children, disableWhiteBox }) => (
@@ -26,7 +26,7 @@ const ProfileLayout = ({ children, disableWhiteBox }) => (
       <Col size={3}>
         <div className={cx(s.leftPart, s.whiteBox)}>
           <div className={s.imgContainer}>
-            <img alt="Deloitte" src="https://instagram.frix2-1.fna.fbcdn.net/v/t51.2885-19/s320x320/13402406_532985290225422_964375496_a.jpg?tp=1&_nc_ht=instagram.frix2-1.fna.fbcdn.net&_nc_ohc=ZbeNAYkBDDYAX--F-Zq&edm=ABfd0MgBAAAA&ccb=7-4&oh=f48711a5ef878c043056bebf48ffc55c&oe=60BF2509&_nc_sid=7bff83" />
+            <img alt="Deloitte" src="https://is2-ssl.mzstatic.com/image/thumb/Podcasts113/v4/95/3d/75/953d7532-662a-3e20-9fa0-fba59613ef0b/mza_11692907723537832568.jpg/1200x1200bb.jpg" />
           </div>
           <div className={s.tabsTitle}>Профиль</div>
           <ul className={s.linkTabs}>

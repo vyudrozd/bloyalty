@@ -59,6 +59,13 @@ const Profile = () => (
         <Graph data={data} />
       </div>
     </div>
+    <div className={s.whiteBox}>
+      <div className={s.sectionTitle}>
+        Вы можете
+        {' '}
+        <a href="/" className={s.exitTitle}>выйти из системы</a>
+      </div>
+    </div>
   </>
 );
 

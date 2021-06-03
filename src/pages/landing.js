@@ -10,7 +10,7 @@ import { getUserData } from '../../lib/store/user/selectors';
 import Input from '../components/UI/Input';
 import Button from '../components/UI/Button';
 
-const Landing = ({ handleSubmit }) => {
+const Landing = ({ handleSubmit, error }) => {
   const userData = useSelector(getUserData);
 
   const [loading, setLoading] = useState(false);
@@ -33,8 +33,9 @@ const Landing = ({ handleSubmit }) => {
       if (values.authLogin === 'demo_deloitte' && values.authPassword === '12345') {
         history.push('/profile');
       } else {
-        throw SubmissionError({
+        throw new SubmissionError({
           authLogin: 'Ошибка авторизации',
+          _error: 'Ошибка авторизации',
         });
       }
     }, 1000);
@@ -76,6 +77,10 @@ const Landing = ({ handleSubmit }) => {
                 placeholder="Ваш логин"
                 inputWrapClass={s.inputWrap}
                 className={s.input}
+                // meta={{
+                //   error: 'Ошибка авторизации',
+                //   touched: true,
+                // }}
               />
               <div className={s.formSubtitle}>Пароль</div>
               <Field
